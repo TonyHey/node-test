@@ -17,4 +17,4 @@ http.createServer((request, response) => {
 
 }).listen(8888);
 
-console.log("Server running at localhot:8888/");
+console.log("Server running at localhot:8888");
