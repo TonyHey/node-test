@@ -1,20 +1,6 @@
-const http = require("http");
-const fs = require("fs");
-const resContent = {};
+const event = require("./src/event"),
+      server = require("./src/createServer");
 
-fs.readFile("test.json", (err, data) =>{
-    if(err) {
-        return console.error(err);
-    }
-    resContent.response = JSON.parse(data);
-});
+event.eventTest();
+server.startServer();
 
-http.createServer((request, response) => {
-    console.log(resContent);
-    response.writeHead(200, {"Content-Type":"text/plain"});
-
-    response.end(resContent.response.data);
-
-}).listen(8888);
-
-console.log("Server running at localhot:8888");
