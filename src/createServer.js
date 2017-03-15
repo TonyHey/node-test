@@ -1,13 +1,12 @@
 const http = require("http"),
       fileReder = require("./fsTest"),
+      reqHandlers = require("./resRequest"),
       resContent = fileReder.getData();
 
 const startServer = () => {
     http.createServer((request, response) => {
-        console.log(resContent);
-
-        response.writeHead(200, {"Content-Type":"text/plain"});
-        response.end(resContent.response.data);
+        // response.writeHead(200, {"Content-Type":"text/plain"});
+        reqHandlers.getPost(request, response);
 
     }).listen(8888);
 }

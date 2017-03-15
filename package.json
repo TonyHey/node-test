@@ -11,6 +11,7 @@
   "dependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.2.1"
+    "gulp-nodemon": "^2.2.1",
+    "mysql": "^2.13.0"
   }
 }
