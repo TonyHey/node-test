@@ -6,7 +6,9 @@ const http = require("http"),
 const startServer = () => {
     http.createServer((request, response) => {
         // response.writeHead(200, {"Content-Type":"text/plain"});
-        reqHandlers.getPost(request, response);
+        if (request.url === "/") {
+            reqHandlers.getPost(request, response);
+        }
 
     }).listen(8888);
 }

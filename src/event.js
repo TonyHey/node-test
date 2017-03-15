@@ -2,8 +2,7 @@ const events = require('events'),
       eventEmitter = new events.EventEmitter();
 
 const eventTest = () => {
-    console.log("Server running at localhot:8888 !");
-    // 
+
     const listener1 = () => {
         console.log("execute listener1");
     }
